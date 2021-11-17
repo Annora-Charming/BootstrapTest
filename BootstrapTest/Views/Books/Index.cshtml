@@ -1,10 +1,47 @@
 ﻿@using Library
 @model IEnumerable<Book>
 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<style>
+    .titles, .bookInfo {
+        color: #8697ba;
+    }
+</style>
+
 <h1>@ViewBag.Title</h1>
 
-@foreach(var book in Model)
-{
-    <label>Title</label>
-    <div>@book.Title</div>
-}
+<div class="container">
+    @foreach (var book in Model)
+    {
+        <hr/>
+        <div class="row">
+            <div class="col-6 titles">Title</div>
+            <div class="bookInfo">@book.Title</div>
+        </div>
+        <div class="row">
+            <div class="col-6 titles">Author</div>
+            <div class="bookInfo">@book.Author</div>
+        </div>
+        <div class="row">
+            <div class="col-6 titles">Year of edition</div>
+            <div class="bookInfo">@book.YearOfEdition</div>
+        </div>
+        <div class="row">
+            <div class="col-6 titles">Genre</div>
+            <div class="bookInfo">@book.Genre</div>
+        </div>
+        <div class="row">
+            <div class="col-6 titles">ISBN</div>
+            <div class="bookInfo">@book.ISBN</div>
+        </div>
+        <div class="row">
+            <div class="col-6 titles">Inventory number</div>
+            <div class="bookInfo">@book.InventoryNumber</div>
+        </div>
+    }
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
